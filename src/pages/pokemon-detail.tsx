@@ -1,22 +1,41 @@
 import React, { FunctionComponent, useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Pokemon from "../models/pokemon";
-import POKEMONS from "../models/mock-pokemon";
 import formatDate from "../helpers/format-date";
 import formatType from "../helpers/format-type";
+import PokemonService from "../services/pokemon-service";
 
-const PokemonsDetail: FunctionComponent = () => {
-  const { id } = useParams();
+//gestion du probleme de type undefinded avec le type any ????
+type Params= { id: string | any };
+
+const PokemonsDetail: FunctionComponent<Params> = () => {
+  //ici useParams remplace l'utilisation de match.params.id dans la constante id
+  const { id } = useParams<Params>();
 
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
 
+
+
   useEffect(() => {
-    POKEMONS.forEach((pokemon) => {
-      if (id === pokemon.id.toString()) {
-        setPokemon(pokemon);
-      }
-    });
-  }, [id]);
+    PokemonService.getPokemon(+id).then(pokemon => setPokemon(pokemon));
+  }, [id])
+
+  //version avec le ficier pokemon service qui gere les requetes
+  //   fetch(`http://localhost:3001/pokemons/${id}`)
+  //   .then(reponse => reponse.json())
+  //   .then(pokemon => {
+  //     if(pokemon.id) setPokemon(pokemon);
+  //   })
+  //}, [id])
+
+  //version avant api/rest
+  // useEffect(() => {
+  //   POKEMONS.forEach((pokemon) => {
+  //     if (id === pokemon.id.toString()) {
+  //       setPokemon(pokemon);
+  //     }
+  //   });
+  // }, [id]);
 
   return (
     <div>
