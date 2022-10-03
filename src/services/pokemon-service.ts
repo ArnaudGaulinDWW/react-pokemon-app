@@ -19,7 +19,7 @@ export default class PokemonService {
     });
   }
   
-  static getPokemon(id: number): Promise<Pokemon|null> {
+  static getPokemon(id: number): Promise<Pokemon|any> {
     if(this.isDev) {
       return fetch(`http://localhost:3001/pokemons/${id}`)
       .then(response => response.json())
