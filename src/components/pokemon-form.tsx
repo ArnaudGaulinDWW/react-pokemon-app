@@ -104,7 +104,7 @@ const PokemonForm: FunctionComponent<Props> = ({ pokemon, isEditForm }) => {
   const addPokemon = () => {
     //ici la ligne obsolète la méthode .push n'est plus utilisé
     //history.push(`/pokemons/${pokemon.id}`);
-    PokemonService.addPokemon(pokemon).then(() => navigate("pokemons"));
+    PokemonService.addPokemon(pokemon).then(() => navigate("/pokemons"));
   };
 
   const updatePokemon = () => {
@@ -124,7 +124,7 @@ const PokemonForm: FunctionComponent<Props> = ({ pokemon, isEditForm }) => {
     if (isAddForm()) {
       const start =
       "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/";
-      const end = "png";
+      const end = ".png";
 
       if (
         !form.picture.value.startsWith(start) ||

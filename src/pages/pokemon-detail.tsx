@@ -4,6 +4,7 @@ import Pokemon from "../models/pokemon";
 import formatDate from "../helpers/format-date";
 import formatType from "../helpers/format-type";
 import PokemonService from "../services/pokemon-service";
+import Loader from "../components/loader";
 
 //gestion du probleme de type undefinded avec le type any ????
 type Params= { id: string | any };
@@ -104,7 +105,7 @@ const PokemonsDetail: FunctionComponent<Params> = () => {
           </div>
         </div>
       ) : (
-        <h4 className="center">Aucun pokémon à afficher !</h4>
+        <h4 className="center"><Loader/></h4>
       )}
     </div>
   );
