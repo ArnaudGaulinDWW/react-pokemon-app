@@ -108,7 +108,38 @@ export const POKEMONS: Pokemon[] = [
   picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/037.png",
   types: ["Feu"],
   created: new Date()
+ },
+
+ {
+  id: 13,
+  name: "Fatioux",
+  hp: 17,
+  cp: 8,
+  picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/150.png",
+  types: ["Fée"],
+  created: new Date()
+ },
+
+ {
+  id: 14,
+  name: "Oliviox",
+  hp: 17,
+  cp: 8,
+  picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/050.png",
+  types: ["Normal"],
+  created: new Date()
+ },
+
+ {
+  id: 15,
+  name: "Arnioux",
+  hp: 80,
+  cp: 10,
+  picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/042.png",
+  types: ["Vol"],
+  created: new Date()
  }
+ 
 ];
   
 export default POKEMONS;

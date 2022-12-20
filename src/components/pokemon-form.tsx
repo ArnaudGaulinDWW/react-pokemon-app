@@ -116,7 +116,6 @@ const PokemonForm: FunctionComponent<Props> = ({ pokemon, isEditForm }) => {
   const isAddForm = () => {
     return !isEditForm;
   };
-
   const validateForm = () => {
     let newForm: Form = form;
 

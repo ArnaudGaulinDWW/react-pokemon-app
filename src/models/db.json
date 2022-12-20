@@ -123,6 +123,27 @@
       "types": [
         "Feu"
       ]
+    },
+    {
+      "id": 1665061882581,
+      "hp": "999",
+      "cp": 10,
+      "name": "Fatioux",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/200.png",
+      "types": [
+        "Fée",
+        "Combat"
+      ]
+    },
+    {
+      "id": 1665062672596,
+      "hp": "1",
+      "cp": "1",
+      "name": "Oliviox",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/050.png",
+      "types": [
+        "Normal"
+      ]
     }
   ]
 }
